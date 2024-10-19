@@ -1,0 +1,42 @@
+package basic;
+import java.util.*;
+class GetReadyFastException extends Exception{
+	public GetReadyFastException(String msg) {
+		super(msg);
+	}
+	
+}
+
+class SleepException extends Exception{
+	public SleepException(String msg) {
+		super(msg);
+	}
+}
+public class ExpPra {
+
+	public static void main(String[] args) throws SleepException, GetReadyFastException{
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the wake up time");
+		int wake_up=sc.nextInt();
+		if(wake_up>8) {
+			try {
+				throw new GetReadyFastException("time up");
+				
+			}
+			catch(GetReadyFastException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		else {
+			try {
+				throw new SleepException("sleep well");
+			}
+			catch(SleepException e){
+				System.out.println(e.getMessage());
+			}
+		}
+		
+	}
+
+}

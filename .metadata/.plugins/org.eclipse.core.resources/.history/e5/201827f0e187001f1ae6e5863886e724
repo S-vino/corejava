@@ -1,0 +1,42 @@
+package basic;
+import java.util.Scanner;
+
+public class HavePatienceException extends Exception{
+	
+}
+public class OutOfSevriceException extends Exception{
+	
+}
+		
+public class Matrimony {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter your age");
+		int age=sc.nextInt();
+		ageVerify(age);
+		
+	}
+	public static void ageVerify(int age) {
+		if(age<21) {
+			try {
+				throw new HavePatienceException();
+			}
+			catch(HavePatienceException e)
+			{
+				System.out.println("go to college and study java");
+			}
+		}
+		else if(age>60){
+			try {
+				throw new OutOfSevriceException();
+				
+			}
+			catch(OutOfSevriceException e) {
+				System.out.println("Better luck next time");
+			}
+		}
+	}
+
+}

@@ -1,0 +1,31 @@
+package Exeception;
+class tryItOutException extends Exception{
+	public tryItOutException(String msg) {
+		super();
+	}
+}
+
+class notTryItOutException extends Exception{
+	public notTryItOutException(String msg) {
+		super();
+	}
+}
+
+public class WithOutTryCatch {
+
+	public static void main(String[] args) throws tryItOutException
+	{
+		// TODO Auto-generated method stub
+		try {
+			if (true){
+				throw new tryItOutException("trying the exception handling with out using try and catch");
+			}
+		}
+		catch(tryItOutException e) {
+			
+		}
+		
+	}
+
+	
+}

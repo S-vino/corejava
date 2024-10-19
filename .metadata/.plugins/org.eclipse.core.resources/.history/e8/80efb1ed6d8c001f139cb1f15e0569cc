@@ -1,0 +1,19 @@
+class Sum extends Thread{
+	public void run() {
+		int a,b;
+		a=20;
+		b=40;
+		int sum=a+b;
+		System.out.println(sum);
+	}
+}
+
+public class SumThread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Sum t=new Sum();
+		t.start();
+	}
+
+}

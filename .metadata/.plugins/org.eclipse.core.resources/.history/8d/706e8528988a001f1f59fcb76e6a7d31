@@ -1,0 +1,19 @@
+package basic;
+
+public class SumBtString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="ram@12q53";
+		char ch[]=new char[s.length()];
+		int sum=0;
+		for(int i=0;i<ch.length;i++){
+			if(ch[i] >='1'&& ch[i]<'5') {
+				sum=sum+ch[i]-'0';
+			}
+			
+		}
+		System.out.println(sum);
+	}
+
+}

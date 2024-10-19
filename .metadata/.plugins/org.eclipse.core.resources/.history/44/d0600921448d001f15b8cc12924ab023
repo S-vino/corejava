@@ -1,0 +1,24 @@
+package com.mavenjunitproject;
+import org.junit.Test;
+
+public class Factorial {
+
+		public int fact(int n) {
+			int fact=1;
+			for(int i=1;i<n;i++) {
+				fact=fact*i;
+			}
+			return fact;
+		}
+		
+		@Test
+		public void testfact() {
+			assertEquals(120,fact(4));
+		}
+
+		private void assertEquals(int i, int fact) {
+			// TODO Auto-generated method stub
+			
+		}
+
+}
